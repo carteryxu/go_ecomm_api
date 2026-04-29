@@ -1,8 +1,9 @@
 version: "2"
 sql:
-  - engine: "mysql"
-    queries: "./internal/adapters/postgresql/migrations"
-    schema: "./internal/adapters/postgresql/sqlc/queries.sql"
+  - engine: "postgresql"
+    queries: 
+      - "./internal/adapters/postgresql/sqlc/queries.sql"
+    schema: "./internal/adapters/postgresql/migrations"
     gen:
       go:
         package: "repo"
